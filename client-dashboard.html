@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Dashboard - Student Gigs</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="dashboard-body">
+
+    <div class="dashboard-layout">
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="dashboard-sidebar">
+
+            <a href="client-dashboard.html" class="dashboard-brand">
+
+                <span class="dashboard-logo">
+                    S
+                </span>
+
+                <span>Student Gigs</span>
+
+            </a>
+
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar">
+                    C
+                </div>
+
+                <div>
+
+                    <strong id="sidebarClientName">
+                        Client
+                    </strong>
+
+                    <span>
+                        Client account
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a
+                    href="client-dashboard.html"
+                    class="sidebar-link active"
+                >
+
+                    <span>⌂</span>
+
+                    <div>
+
+                        <strong>Dashboard</strong>
+
+                        <small>
+                            Overview
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#postJobSection"
+                    class="sidebar-link"
+                >
+
+                    <span>＋</span>
+
+                    <div>
+
+                        <strong>Post a Gig</strong>
+
+                        <small>
+                            Create opportunity
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#myPostedJobs"
+                    class="sidebar-link"
+                >
+
+                    <span>▣</span>
+
+                    <div>
+
+                        <strong>My Gigs</strong>
+
+                        <small>
+                            Posted opportunities
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#applicationsSection"
+                    class="sidebar-link"
+                >
+
+                    <span>✓</span>
+
+                    <div>
+
+                        <strong>Applications</strong>
+
+                        <small>
+                            Review students
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+                <a href="profile.html" class="sidebar-link">
+
+                    <span>◯</span>
+
+                    <div>
+
+                        <strong>Profile</strong>
+
+                        <small>
+                            Your account
+                        </small>
+
+                    </div>
+
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-tip">
+
+                    <span>💡</span>
+
+                    <div>
+
+                        <strong>
+                            Need student help?
+                        </strong>
+
+                        <small>
+                            Post a gig and find students nearby.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    id="logoutLink"
+                    class="sidebar-logout"
+                >
+
+                    <span>↪</span>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN
+             ================================================= -->
+
+        <main class="dashboard-main">
+
+
+            <!-- Top bar -->
+
+            <header class="dashboard-topbar">
+
+                <div>
+
+                    <span class="dashboard-eyebrow">
+                        CLIENT DASHBOARD
+                    </span>
+
+                    <h1>
+                        Welcome, <span id="dashboardClientName">Client</span> 👋
+                    </h1>
+
+                    <p>
+                        Create opportunities and find the right student for your task.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-top-actions">
+
+                    <button
+                        class="notification-button"
+                        type="button"
+                    >
+                        ♧
+                        <span></span>
+                    </button>
+
+
+                    <a
+                        href="profile.html"
+                        class="top-profile"
+                    >
+
+                        <div class="top-avatar">
+                            C
+                        </div>
+
+                        <div>
+
+                            <strong id="topClientName">
+                                Client
+                            </strong>
+
+                            <small>
+                                Client
+                            </small>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 STATS
+                 ================================================= -->
+
+            <section class="dashboard-stats">
+
+                <div class="dashboard-stat-card purple-stat">
+
+                    <div class="stat-icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Posted Gigs
+                        </span>
+
+                        <strong id="postedJobsCount">
+                            0
+                        </strong>
+
+                        <small>
+                            Opportunities created
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-stat-card pink-stat">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Applications
+                        </span>
+
+                        <strong id="applicationsReceivedCount">
+                            0
+                        </strong>
+
+                        <small>
+                            Students interested
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-stat-card green-stat">
+
+                    <div class="stat-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Accepted
+                        </span>
+
+                        <strong id="acceptedApplicationsCount">
+                            0
+                        </strong>
+
+                        <small>
+                            Students selected
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-stat-card yellow-stat">
+
+                    <div class="stat-icon">
+                        ₹
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Posted Value
+                        </span>
+
+                        <strong id="totalPostedValue">
+                            ₹0
+                        </strong>
+
+                        <small>
+                            Across your gigs
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 POST JOB
+                 ================================================= -->
+
+            <section
+                class="client-post-section"
+                id="postJobSection"
+            >
+
+                <div class="client-post-heading">
+
+                    <div>
+
+                        <span>
+                            CREATE OPPORTUNITY
+                        </span>
+
+                        <h2>
+                            Post a new gig
+                        </h2>
+
+                        <p>
+                            Tell students what help you need.
+                        </p>
+
+                    </div>
+
+                    <div class="post-job-icon">
+                        ✨
+                    </div>
+
+                </div>
+
+
+                <form id="jobForm" class="client-job-form">
+
+
+                    <div class="client-form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="jobTitle">
+                                Job Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="jobTitle"
+                                placeholder="Example: Furniture Removal"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="location">
+                                Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="location"
+                                placeholder="Example: Kothrud, Pune"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group client-form-wide">
+
+                            <label for="description">
+                                Job Description
+                            </label>
+
+                            <textarea
+                                id="description"
+                                placeholder="Describe the task students will help you with..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="date">
+                                Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="date"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="time">
+                                Start Time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="time"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="students">
+                                Students Required
+                            </label>
+
+                            <input
+                                type="number"
+                                id="students"
+                                min="1"
+                                placeholder="Example: 2"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="payment">
+                                Total Payment (₹)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="payment"
+                                min="0"
+                                placeholder="Example: 800"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="client-form-bottom">
+
+                        <p id="message"></p>
+
+                        <button
+                            type="submit"
+                            class="client-post-button"
+                        >
+
+                            Post Gig
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- =================================================
+                 POSTED JOBS
+                 ================================================= -->
+
+            <section
+                class="dashboard-section client-jobs-section"
+                id="myPostedJobs"
+            >
+
+                <div class="dashboard-section-header">
+
+                    <div>
+
+                        <span>
+                            YOUR OPPORTUNITIES
+                        </span>
+
+                        <h2>
+                            My posted gigs
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="myPostedJobsContainer"
+                    class="client-posted-jobs-grid"
+                >
+
+                    <div class="empty-dashboard-state">
+                        No jobs posted yet.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 APPLICATIONS
+                 ================================================= -->
+
+            <section
+                class="dashboard-panel client-applications-panel"
+                id="applicationsSection"
+            >
+
+                <div class="dashboard-panel-header">
+
+                    <div>
+
+                        <span>
+                            STUDENT RESPONSES
+                        </span>
+
+                        <h2>
+                            Applications received
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="applicationsContainer"
+                    class="client-applications-list"
+                >
+
+                    <p class="empty-dashboard-state">
+                        No applications yet.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 BOTTOM TIP
+                 ================================================= -->
+
+            <section class="dashboard-bottom-banner">
+
+                <div class="bottom-banner-icon">
+                    🤝
+                </div>
+
+                <div>
+
+                    <strong>
+                        Make your gig clear and specific.
+                    </strong>
+
+                    <span>
+                        A detailed description helps students understand what you need.
+                    </span>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="client-dashboard.js"></script>
+
+</body>
+
+</html>

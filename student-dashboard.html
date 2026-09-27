@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard - Student Gigs</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="dashboard-body">
+
+    <div class="dashboard-layout">
+
+        <!-- ================================================
+             SIDEBAR
+             ================================================ -->
+
+        <aside class="dashboard-sidebar">
+
+            <a href="student-dashboard.html" class="dashboard-brand">
+
+                <span class="dashboard-logo">
+                    S
+                </span>
+
+                <span>Student Gigs</span>
+
+            </a>
+
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar">
+                    S
+                </div>
+
+                <div>
+                    <strong id="sidebarUserName">
+                        Student
+                    </strong>
+
+                    <span>
+                        Student account
+                    </span>
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a href="student-dashboard.html" class="sidebar-link active">
+
+                    <span>⌂</span>
+
+                    <div>
+                        <strong>Dashboard</strong>
+                        <small>Overview</small>
+                    </div>
+
+                </a>
+
+
+                <a href="#jobsSection" class="sidebar-link">
+
+                    <span>⌕</span>
+
+                    <div>
+                        <strong>Find Gigs</strong>
+                        <small>Browse opportunities</small>
+                    </div>
+
+                </a>
+
+
+                <a href="#myApplications" class="sidebar-link">
+
+                    <span>✓</span>
+
+                    <div>
+                        <strong>Applications</strong>
+                        <small>Track your applications</small>
+                    </div>
+
+                </a>
+
+
+                <a href="#myJobs" class="sidebar-link">
+
+                    <span>★</span>
+
+                    <div>
+                        <strong>My Gigs</strong>
+                        <small>Accepted gigs</small>
+                    </div>
+
+                </a>
+
+
+                <a href="profile.html" class="sidebar-link">
+
+                    <span>◯</span>
+
+                    <div>
+                        <strong>Profile</strong>
+                        <small>Your account</small>
+                    </div>
+
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-tip">
+
+                    <span>✨</span>
+
+                    <div>
+                        <strong>Find your next gig</strong>
+                        <small>
+                            New opportunities can appear anytime.
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <a href="#" id="logoutLink" class="sidebar-logout">
+
+                    <span>↪</span>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================================================
+             MAIN DASHBOARD
+             ================================================ -->
+
+        <main class="dashboard-main">
+
+
+            <!-- Top Bar -->
+
+            <header class="dashboard-topbar">
+
+                <div>
+
+                    <span class="dashboard-eyebrow">
+                        STUDENT DASHBOARD
+                    </span>
+
+                    <h1>
+                        Hey, <span id="dashboardUserName">Student</span> 👋
+                    </h1>
+
+                    <p>
+                        Let's find something great for you today.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-top-actions">
+
+                    <button class="notification-button" type="button">
+                        ♧
+                        <span></span>
+                    </button>
+
+                    <a href="profile.html" class="top-profile">
+
+                        <div class="top-avatar">
+                            S
+                        </div>
+
+                        <div>
+                            <strong id="topUserName">
+                                Student
+                            </strong>
+
+                            <small>
+                                Student
+                            </small>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+
+            <!-- ==========================================
+                 SEARCH
+                 ========================================== -->
+
+            <section class="dashboard-search-section">
+
+                <div class="dashboard-search-heading">
+
+                    <div>
+
+                        <span>DISCOVER</span>
+
+                        <h2>
+                            Find a gig that fits your day.
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-search">
+
+                    <div class="search-field">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search gigs, tasks or keywords..."
+                        >
+
+                    </div>
+
+
+                    <div class="search-location">
+
+                        <span>📍</span>
+
+                        <select id="areaFilter">
+
+                            <option>All Areas</option>
+                            <option>Kothrud</option>
+                            <option>Baner</option>
+                            <option>Wakad</option>
+                            <option>Hadapsar</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        id="searchButton"
+                        class="dashboard-search-button"
+                        type="button"
+                    >
+                        Search
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+                 STATS
+                 ========================================== -->
+
+            <section class="dashboard-stats">
+
+                <div class="dashboard-stat-card purple-stat">
+
+                    <div class="stat-icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <span>Available Gigs</span>
+
+                        <strong id="availableJobsCount">
+                            0
+                        </strong>
+
+                        <small>
+                            Ready to explore
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-stat-card pink-stat">
+
+                    <div class="stat-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>Applications</span>
+
+                        <strong id="applicationsCount">
+                            0
+                        </strong>
+
+                        <small>
+                            Gigs you've applied for
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-stat-card green-stat">
+
+                    <div class="stat-icon">
+                        ★
+                    </div>
+
+                    <div>
+
+                        <span>Active Gigs</span>
+
+                        <strong id="activeJobsCount">
+                            0
+                        </strong>
+
+                        <small>
+                            Accepted opportunities
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-stat-card yellow-stat">
+
+                    <div class="stat-icon">
+                        ₹
+                    </div>
+
+                    <div>
+
+                        <span>Potential Earnings</span>
+
+                        <strong id="earningsCount">
+                            ₹0
+                        </strong>
+
+                        <small>
+                            From accepted gigs
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+                 RECOMMENDED
+                 ========================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="dashboard-section-header">
+
+                    <div>
+
+                        <span>FOR YOU</span>
+
+                        <h2>
+                            Recommended gigs
+                        </h2>
+
+                    </div>
+
+                    <a href="#jobsSection">
+                        View all →
+                    </a>
+
+                </div>
+
+
+                <div class="recommended-grid">
+
+                    <article class="recommended-card">
+
+                        <div class="recommended-top">
+
+                            <span class="recommended-tag">
+                                POPULAR
+                            </span>
+
+                            <button type="button">
+                                ♡
+                            </button>
+
+                        </div>
+
+                        <div class="recommended-icon purple-bg">
+                            📦
+                        </div>
+
+                        <h3>
+                            Furniture Moving Help
+                        </h3>
+
+                        <p>
+                            Help a local client move furniture.
+                        </p>
+
+                        <div class="recommended-meta">
+                            <span>📍 Kothrud</span>
+                            <span>2 hrs</span>
+                        </div>
+
+                        <div class="recommended-bottom">
+
+                            <strong>
+                                ₹800
+                            </strong>
+
+                            <span>
+                                2 students
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="recommended-card">
+
+                        <div class="recommended-top">
+
+                            <span class="recommended-tag pink-tag">
+                                FLEXIBLE
+                            </span>
+
+                            <button type="button">
+                                ♡
+                            </button>
+
+                        </div>
+
+                        <div class="recommended-icon pink-bg">
+                            📱
+                        </div>
+
+                        <h3>
+                            Social Media Assistance
+                        </h3>
+
+                        <p>
+                            Help a small business with simple tasks.
+                        </p>
+
+                        <div class="recommended-meta">
+                            <span>📍 Baner</span>
+                            <span>Flexible</span>
+                        </div>
+
+                        <div class="recommended-bottom">
+
+                            <strong>
+                                ₹500
+                            </strong>
+
+                            <span>
+                                1 student
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="recommended-card">
+
+                        <div class="recommended-top">
+
+                            <span class="recommended-tag blue-tag">
+                                NEW
+                            </span>
+
+                            <button type="button">
+                                ♡
+                            </button>
+
+                        </div>
+
+                        <div class="recommended-icon blue-bg">
+                            📝
+                        </div>
+
+                        <h3>
+                            Event Registration Help
+                        </h3>
+
+                        <p>
+                            Assist guests during a local event.
+                        </p>
+
+                        <div class="recommended-meta">
+                            <span>📍 Wakad</span>
+                            <span>3 hrs</span>
+                        </div>
+
+                        <div class="recommended-bottom">
+
+                            <strong>
+                                ₹600
+                            </strong>
+
+                            <span>
+                                2 students
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+                 AVAILABLE JOBS
+                 ========================================== -->
+
+            <section
+                class="dashboard-section"
+                id="jobsSection"
+            >
+
+                <div class="dashboard-section-header">
+
+                    <div>
+
+                        <span>EXPLORE</span>
+
+                        <h2>
+                            Available gigs
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="jobs-container dashboard-jobs-container"
+                    id="jobsContainer"
+                >
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+                 TWO COLUMN AREA
+                 ========================================== -->
+
+            <section class="dashboard-two-column">
+
+
+                <!-- Applications -->
+
+                <div
+                    class="dashboard-panel"
+                    id="myApplications"
+                >
+
+                    <div class="dashboard-panel-header">
+
+                        <div>
+
+                            <span>
+                                YOUR ACTIVITY
+                            </span>
+
+                            <h2>
+                                Recent applications
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="myApplicationsContainer"
+                        class="dashboard-list"
+                    >
+
+                        <p class="empty-dashboard-state">
+                            No applications yet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- My Gigs -->
+
+                <div
+                    class="dashboard-panel"
+                    id="myJobs"
+                >
+
+                    <div class="dashboard-panel-header">
+
+                        <div>
+
+                            <span>
+                                YOUR GIGS
+                            </span>
+
+                            <h2>
+                                Active gigs
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="myJobsContainer"
+                        class="dashboard-list"
+                    >
+
+                        <p class="empty-dashboard-state">
+                            No accepted gigs yet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- Bottom Tip -->
+
+            <section class="dashboard-bottom-banner">
+
+                <div class="bottom-banner-icon">
+                    ✨
+                </div>
+
+                <div>
+
+                    <strong>
+                        Looking for something specific?
+                    </strong>
+
+                    <span>
+                        Use the search above to find gigs by area or keyword.
+                    </span>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="student-dashboard.js"></script>
+
+</body>
+
+</html>

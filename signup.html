@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up - Student Gigs</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="auth-body">
+
+    <main class="signup-page">
+
+        <!-- Left Visual Section -->
+        <section class="signup-visual">
+
+            <a href="index.html" class="auth-logo">
+                <span class="logo-mark">S</span>
+                <span>Student Gigs</span>
+            </a>
+
+            <div class="signup-visual-content">
+
+                <span class="visual-badge">
+                    ✦ Built for students & local opportunities
+                </span>
+
+                <h1>
+                    Turn your free time into
+                    <span>real opportunities.</span>
+                </h1>
+
+                <p>
+                    Find flexible part-time work, earn while studying,
+                    and connect with people looking for reliable student help.
+                </p>
+
+                <div class="visual-points">
+
+                    <div class="visual-point">
+                        <span>✓</span>
+                        <div>
+                            <strong>Flexible gigs</strong>
+                            <small>Choose work that fits your schedule.</small>
+                        </div>
+                    </div>
+
+                    <div class="visual-point">
+                        <span>✓</span>
+                        <div>
+                            <strong>Local opportunities</strong>
+                            <small>Discover jobs around your area.</small>
+                        </div>
+                    </div>
+
+                    <div class="visual-point">
+                        <span>✓</span>
+                        <div>
+                            <strong>Simple & student-friendly</strong>
+                            <small>Apply and manage gigs with ease.</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="visual-footer">
+                © 2026 Student Gigs
+            </div>
+
+        </section>
+
+
+        <!-- Right Signup Section -->
+        <section class="signup-form-section">
+
+            <div class="signup-form-wrapper">
+
+                <a href="index.html" class="mobile-home-link">
+                    ← Back to Home
+                </a>
+
+                <div class="signup-heading">
+
+                    <span class="small-heading">GET STARTED</span>
+
+                    <h2>Create your account</h2>
+
+                    <p>
+                        Join Student Gigs and start discovering opportunities
+                        made for students.
+                    </p>
+
+                </div>
+
+
+                <form id="signupForm" class="signup-form">
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+
+                        <label for="name">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com"
+                        >
+
+                    </div>
+
+
+                    <!-- Phone -->
+                    <div class="form-group">
+
+                        <label for="phone">Phone Number</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter your phone number"
+                        >
+
+                    </div>
+
+
+                    <!-- Password Row -->
+                    <div class="password-row">
+
+                        <div class="form-group">
+
+                            <label for="password">Password</label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Create a password"
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="confirmPassword">Confirm Password</label>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm password"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Account Type -->
+                    <div class="form-group">
+
+                        <label>How do you want to use Student Gigs?</label>
+
+                        <div class="role-cards">
+
+                            <button
+                                type="button"
+                                class="role-card"
+                                data-role="student"
+                            >
+
+                                <div class="role-icon">
+                                    🎓
+                                </div>
+
+                                <div class="role-info">
+                                    <strong>I'm a Student</strong>
+                                    <span>Find gigs and earn money</span>
+                                </div>
+
+                                <span class="role-check">✓</span>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="role-card"
+                                data-role="client"
+                            >
+
+                                <div class="role-icon">
+                                    💼
+                                </div>
+
+                                <div class="role-info">
+                                    <strong>I'm a Client</strong>
+                                    <span>Post gigs and find students</span>
+                                </div>
+
+                                <span class="role-check">✓</span>
+
+                            </button>
+
+                        </div>
+
+                        <!-- Hidden field preserved for signup.js -->
+                        <select id="role" style="display: none;">
+                            <option value="">Select account type</option>
+                            <option value="student">Student</option>
+                            <option value="client">Client</option>
+                        </select>
+
+                    </div>
+
+
+                    <button type="submit" class="signup-submit-button">
+                        Create Account
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+
+                <!-- Existing Account -->
+                <p class="login-text">
+                    Already have an account?
+                    <a href="login.html">Login</a>
+                </p>
+
+                <p id="message" class="auth-message"></p>
+
+                <p class="terms-text">
+                    By creating an account, you agree to use Student Gigs
+                    responsibly and respectfully.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+        const roleCards = document.querySelectorAll(".role-card");
+        const roleSelect = document.getElementById("role");
+
+        roleCards.forEach(card => {
+
+            card.addEventListener("click", () => {
+
+                roleCards.forEach(item => {
+                    item.classList.remove("selected");
+                });
+
+                card.classList.add("selected");
+
+                roleSelect.value = card.dataset.role;
+            });
+
+        });
+    </script>
+
+    <script src="signup.js"></script>
+
+</body>
+</html>

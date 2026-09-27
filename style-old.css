@@ -1,0 +1,525 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.signup-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+}
+
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 40px;
+
+    background-color: white;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Dashboard */
+
+.dashboard {
+    padding: 40px;
+}
+
+.dashboard h1 {
+    text-align: left;
+}
+
+
+/* Search */
+
+.search-box {
+    display: flex;
+    gap: 10px;
+
+    margin: 30px 0;
+}
+
+.search-box input,
+.search-box select {
+    padding: 10px;
+}
+
+
+/* Jobs */
+
+.jobs-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.job-card {
+    width: 300px;
+
+    padding: 20px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.job-card button {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+#jobForm {
+    width: 500px;
+    max-width: 100%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#jobForm input,
+#jobForm textarea {
+    margin-bottom: 10px;
+}
+.applicants-section {
+    margin-top: 40px;
+}
+
+.application-card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.application-card button {
+    margin-right: 10px;
+}
+/* Application Status */
+
+.status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+/* Pending */
+
+.status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+
+/* Accepted */
+
+.status.accepted {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+
+/* Rejected */
+
+.status.rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+/* ===============================
+   STUDENT DASHBOARD UI
+================================ */
+
+.dashboard {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.dashboard h1 {
+    margin-bottom: 8px;
+}
+
+.dashboard > p {
+    margin-bottom: 30px;
+}
+
+
+/* Search Box */
+
+.search-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.search-box input,
+.search-box select {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 220px;
+}
+
+.search-box select {
+    min-width: 150px;
+}
+
+.search-box button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* Jobs */
+
+.jobs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+
+/* Job Card */
+
+.job-card {
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid #e5e5e5;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.job-card h3 {
+    margin-bottom: 15px;
+}
+
+.job-card p {
+    margin: 8px 0;
+}
+
+.job-card button {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* My Applications & My Jobs */
+
+.my-applications,
+.my-jobs {
+    margin-top: 50px;
+}
+
+.application-card {
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    background: white;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .dashboard {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input,
+    .search-box select,
+    .search-box button {
+        width: 100%;
+    }
+
+}
+/* ===============================
+   NAVBAR
+================================ */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: white;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.navbar h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar div {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+
+/* Mobile Navbar */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 20px;
+    }
+
+    .navbar div {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+/* ===============================
+   BUTTONS
+================================ */
+
+button {
+    background: #111;
+    color: white;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+
+/* ===============================
+   SEARCH
+================================ */
+
+.search-box input:focus,
+.search-box select:focus {
+    outline: none;
+    border-color: #111;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ===============================
+   JOB CARD HOVER
+================================ */
+
+.job-card {
+    transition: 0.2s;
+}
+
+.job-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ===============================
+   APPLICATION CARD
+================================ */
+
+.application-card {
+    transition: 0.2s;
+}
+
+.application-card:hover {
+    transform: translateY(-2px);
+}
+/* ===============================
+   CLIENT DASHBOARD FORM
+================================ */
+
+.dashboard form {
+    max-width: 700px;
+    margin-top: 25px;
+    padding: 25px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.dashboard form input,
+.dashboard form textarea,
+.dashboard form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.dashboard form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.dashboard form button {
+    margin-top: 20px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* ===============================
+   CLIENT APPLICATIONS
+================================ */
+
+.applicants-section {
+    margin-top: 50px;
+}
+
+.applicants-section h2 {
+    margin-bottom: 20px;
+}
+
+.applicants-section .application-card {
+    max-width: 700px;
+}
+
+.applicants-section .application-card button {
+    margin-right: 10px;
+    padding: 9px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.applicants-section .application-card button:first-of-type {
+    background: #198754;
+}
+
+.applicants-section .application-card button:last-of-type {
+    background: #dc3545;
+}
+/* ===============================
+   MY POSTED JOBS & APPLICATIONS GRID
+================================ */
+
+#myPostedJobsContainer,
+#myApplicationsContainer,
+#applicationsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Make cards fit nicely inside the grid */
+
+#myPostedJobsContainer .job-card,
+#myApplicationsContainer .application-card,
+#applicationsContainer .application-card {
+    max-width: none;
+    width: 100%;
+    box-sizing: border-box;
+}

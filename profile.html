@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile - Student Gigs</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+
+        <h2>Student Gigs</h2>
+
+        <div>
+
+            <a href="student-dashboard.html">Home</a>
+
+            <a href="student-dashboard.html#myJobs">My Jobs</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="login.html">Logout</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Profile -->
+
+    <main class="profile-container">
+
+        <h1>My Profile</h1>
+
+        <div class="profile-card">
+
+            <h2 id="profileName">Name</h2>
+
+            <p>
+                📧 Email:
+                <span id="profileEmail"></span>
+            </p>
+
+            <p>
+                📱 Phone:
+                <span id="profilePhone"></span>
+            </p>
+
+            <p>
+                👤 Account Type:
+                <span id="profileRole"></span>
+            </p>
+<!-- Edit Profile -->
+
+<h3>Edit Profile</h3>
+
+<label>Full Name</label>
+<input type="text" id="editName">
+
+<label>Phone Number</label>
+<input type="tel" id="editPhone">
+
+<button id="saveProfile">Save Changes</button>
+
+<p id="profileMessage"></p>
+        </div>
+
+    </main>
+
+
+    <script src="profile.js"></script>
+
+</body>
+
+</html>
